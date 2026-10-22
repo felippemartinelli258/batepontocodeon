@@ -6,14 +6,6 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# Encaminha as chamadas da API para a função Netlify.
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/api/:splat"
-  status = 200
-  force = true
-
-# Mantém o acesso às páginas do sistema.
 [[redirects]]
   from = "/*"
   to = "/index.html"
