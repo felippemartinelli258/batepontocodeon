@@ -30,6 +30,8 @@ export async function bootstrap() {
   // Em hospedagem serverless varios cold starts podem ocorrer ao mesmo tempo,
   // entao a insercao ignora conflitos de unicidade em vez de quebrar a requisicao.
   const total = await get('SELECT COUNT(*) AS n FROM usuarios');
+  console.log('[DIAGNOSTICO] Total de usuarios:', total.n);
+console.log('[DIAGNOSTICO] Admin configurado:', process.env.ADMIN_EMAIL);
   if (total.n === 0) {
     const email = String(process.env.ADMIN_EMAIL || '').trim().toLowerCase();
     const senha = process.env.ADMIN_SENHA || '';
