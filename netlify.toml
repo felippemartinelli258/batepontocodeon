@@ -7,7 +7,10 @@
   NODE_VERSION = "22"
 
 [functions]
-  node_bundler = "zisi"
+  node_bundler = "esbuild"
+
+[functions.api]
+  external_node_modules = []
 
 [[redirects]]
   from = "/*"
@@ -16,5 +19,6 @@
 
 [[headers]]
   for = "/assets/*"
+
   [headers.values]
     Cache-Control = "public, max-age=86400"
