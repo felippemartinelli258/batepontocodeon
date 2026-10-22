@@ -1,0 +1,26 @@
+{
+  "name": "codeon-ponto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Codeon Agency - Sistema Interno de Registro de Ponto",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "admin": "node src/scripts/create-admin.js",
+    "backup": "node src/scripts/backup.js",
+    "test": "node test/e2e.js && node test/frontend.js && node test/app.js && node test/acessos.js && node test/identidade.js && node test/imports.js && node test/turso.js",
+    "test:api": "node test/e2e.js",
+    "test:frontend": "node test/frontend.js && node test/app.js",
+    "test:turso": "node test/turso.js",
+    "iniciar": "node src/scripts/iniciar.js",
+    "icones": "node src/scripts/gerar-icones.js"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}

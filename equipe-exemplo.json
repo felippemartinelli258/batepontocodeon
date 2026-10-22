@@ -1,0 +1,55 @@
+{
+  "_comentario": "Exemplo de equipe inicial. Copie este arquivo, ajuste os dados e rode: npm run iniciar -- equipe.json. A senha de cada pessoa e provisoria: no primeiro acesso ela e obrigada a trocar.",
+
+  "admin": {
+    "nome": "Seu Nome Aqui",
+    "email": "seu@email.com",
+    "senha": "TroqueEstaSenha@2026"
+  },
+
+  "usuarios": [
+    {
+      "nome": "Nome do Gestor",
+      "email": "gestor@codeon.agency",
+      "senha": "SenhaProvisoria@2026",
+      "cargo": "Head de Design",
+      "vinculo": "colaborador",
+      "perfil": "gestor"
+    },
+    {
+      "nome": "Nome do Colaborador",
+      "email": "colaborador@codeon.agency",
+      "senha": "SenhaProvisoria@2026",
+      "cargo": "Designer",
+      "vinculo": "colaborador",
+      "perfil": "colaborador",
+      "gestor": "gestor@codeon.agency",
+      "escala": {
+        "jornadaMin": 360,
+        "dias": [1, 2, 3, 4, 5],
+        "turnos": [
+          { "nome": "Padrao", "inicio": "08:00", "fim": "14:00", "descansoMin": 0, "periods": 1 }
+        ],
+        "toleranciaAtrasoMin": 10,
+        "toleranciaSaidaMin": 10
+      }
+    },
+    {
+      "nome": "Nome do Prestador",
+      "email": "prestador@codeon.agency",
+      "cargo": "Copywriter",
+      "vinculo": "prestador",
+      "perfil": "colaborador",
+      "gestor": "gestor@codeon.agency",
+      "escala": {
+        "jornadaMin": 360,
+        "dias": [1, 2, 3, 4, 5],
+        "turnos": [
+          { "nome": "Tarde", "inicio": "13:00", "fim": "19:00", "descansoMin": 0, "periods": 1 }
+        ],
+        "toleranciaAtrasoMin": 10,
+        "toleranciaSaidaMin": 10
+      }
+    }
+  ]
+}
